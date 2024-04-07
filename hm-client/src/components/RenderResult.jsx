@@ -7,7 +7,10 @@ import { useTab } from "../contexts/TabContext";
 import TempChart from "./TempChart";
 import HeartChart from "./HeartRateChart";
 
-const apiBase = "http://localhost:5000";
+const apiBase =
+  import.meta.env.VITE_ENV === "development"
+    ? import.meta.env.VITE_DEV_API_BASE
+    : import.meta.env.VITE_PROD_API_BASE;
 
 export default function RenderResult(props) {
   const { token } = useAuth();

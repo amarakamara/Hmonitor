@@ -2,7 +2,10 @@ import react, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-const apiBase = "http://localhost:5000";
+const apiBase =
+  import.meta.env.VITE_ENV === "development"
+    ? import.meta.env.VITE_DEV_API_BASE
+    : import.meta.env.VITE_PROD_API_BASE;
 
 export default function EmailShare() {
   const { id, username } = useParams();

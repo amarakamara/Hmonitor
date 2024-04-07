@@ -13,7 +13,10 @@ import NewPatientForm from "../components/NewPatientForm";
 
 import "../index.css";
 
-const apiBase = "http://localhost:5000";
+const apiBase =
+  import.meta.env.VITE_ENV === "development"
+    ? import.meta.env.VITE_DEV_API_BASE
+    : import.meta.env.VITE_PROD_API_BASE;
 
 function AllPatients() {
   const { token } = useAuth();

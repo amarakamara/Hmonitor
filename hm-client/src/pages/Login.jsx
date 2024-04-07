@@ -3,7 +3,10 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { useUser } from "../contexts/UserContext";
 import { useAuth } from "../contexts/AuthContext";
 
-const apiBase = "http://localhost:5000";
+const apiBase =
+  import.meta.env.VITE_ENV === "development"
+    ? import.meta.env.VITE_DEV_API_BASE
+    : import.meta.env.VITE_PROD_API_BASE;
 
 export default function Login() {
   const { setUserInfo, setPatientInfo } = useUser();
