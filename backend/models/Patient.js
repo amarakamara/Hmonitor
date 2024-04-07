@@ -8,7 +8,7 @@ const patientSchema = new mongoose.Schema({
   username: String,
   weight: Number,
   height: Number,
-  bmi: Number, // Body Mass Index (BMI)
+  bmi: Number,
 });
 
 const Patient = mongoose.model("Patient", patientSchema);

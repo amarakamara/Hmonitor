@@ -64,8 +64,8 @@ const options = {
 
 app.use(cors(options));
 
-import Admin from "./models/admin.js";
-import Patient from "./models/patient.js";
+import Admin from "./models/Admin.js";
+import Patient from "./models/Patient.js";
 
 // Passport config
 passport.use(Admin.createStrategy());
