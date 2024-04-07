@@ -93,7 +93,6 @@ io.on("connection", (socket) => {
         temp,
         heart,
       };
-      console.log(data);
       socket.emit("sensorData", data);
     } catch (error) {
       console.error(error);
