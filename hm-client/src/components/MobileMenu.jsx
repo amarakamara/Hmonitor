@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useTab } from "../contexts/TabContext";
 import RenderPatients from "./RenderPatients";
 
-
 export default function MobileMenu(props) {
   const menuRef = useRef(null);
 
@@ -24,7 +23,7 @@ export default function MobileMenu(props) {
     <>
       <div
         ref={menuRef}
-        className="flex flex-col absolute shadow-md border-r border-b border-teal-900 left-0 top-0 max-w-80 h-96 z-50 bg-teal-900 px-2 text-cultured"
+        className="flex flex-col absolute shadow-md border-r border-b border-teal-900 left-0 top-10 max-w-80 h-96 z-50 bg-teal-900 px-2 text-cultured"
       >
         <div className="w-full h-12 flex justify-end border-b-2">
           <button
