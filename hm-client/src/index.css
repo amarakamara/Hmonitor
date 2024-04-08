@@ -144,3 +144,9 @@ button:focus-visible {
     max-width: calc(33.33% - 16px);
   }
 }
+
+.img-container {
+  background-image: url("https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGVhbHRofGVufDB8fDB8fHww");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

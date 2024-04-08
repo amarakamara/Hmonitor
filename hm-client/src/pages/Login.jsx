@@ -98,59 +98,61 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen px-4 bg-teal-900 overflow-hidden">
-      <form
-        onSubmit={handleSubmit}
-        method="post"
-        className="text-teal-900 form  max-w-md w-full text-center bg-white rounded-md shadow-md border border-teal-900 px-4 py-6"
-      >
-        <h2 className=" font-bold text-xl mb-4">WELCOME BACK ADMIN</h2>
-        <div className="w-full flex justify-center text-red-400">
-          {showMessage && <h3 className="text-xs">{message}</h3>}
-        </div>
-        <p className="text-sm my-2">
-          Enter your login info below to gain access.
-        </p>
-        <input
-          onChange={handleChange}
-          id="login-email"
-          name="email"
-          type="email"
-          value={loginInfo.email}
-          autoComplete="on"
-          placeholder="Enter your email"
-          className="input mb-4"
-          required
-        />
-
-        <div className="input-div flex flex-row items-center">
+    <div className="img-container w-screen h-screen">
+      <div className="flex justify-center items-center h-full w-full px-4 bg-teal-900 bg-opacity-90 overflow-hidden">
+        <form
+          onSubmit={handleSubmit}
+          method="post"
+          className="text-teal-900 form  max-w-md w-full text-center bg-white rounded-md shadow-md border border-teal-900 px-4 py-6"
+        >
+          <h2 className=" font-bold text-xl mb-4">WELCOME BACK ADMIN</h2>
+          <div className="w-full flex justify-center text-red-400">
+            {showMessage && <h3 className="text-xs">{message}</h3>}
+          </div>
+          <p className="text-sm my-2">
+            Enter your login info below to gain access.
+          </p>
           <input
             onChange={handleChange}
-            id="current-password"
-            name="password"
-            type={showPassword ? "text" : "password"}
-            value={loginInfo.password}
-            autoComplete="off"
-            placeholder="Enter your password"
+            id="login-email"
+            name="email"
+            type="email"
+            value={loginInfo.email}
+            autoComplete="on"
+            placeholder="Enter your email"
+            className="input mb-4"
             required
-            className="w-full focus:outline-none"
           />
-          <a
-            href="#"
-            onClick={togglePasswordView}
-            className="p-0 text-teal-900 text-xs hover:text-teal-900"
-          >
-            {showPassword ? "hide" : "show"}
-          </a>
-        </div>
 
-        <button
-          className="w-full bg-teal-900 text-white px-4 py-2 rounded-md shadow-md hover:bg-teal-700 transition duration-300"
-          type="submit"
-        >
-          Login
-        </button>
-      </form>
+          <div className="input-div flex flex-row items-center">
+            <input
+              onChange={handleChange}
+              id="current-password"
+              name="password"
+              type={showPassword ? "text" : "password"}
+              value={loginInfo.password}
+              autoComplete="off"
+              placeholder="Enter your password"
+              required
+              className="w-full focus:outline-none"
+            />
+            <a
+              href="#"
+              onClick={togglePasswordView}
+              className="p-0 text-teal-900 text-xs hover:text-teal-900"
+            >
+              {showPassword ? "hide" : "show"}
+            </a>
+          </div>
+
+          <button
+            className="w-full bg-teal-900 text-white px-4 py-2 rounded-md shadow-md hover:bg-teal-700 transition duration-300"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
