@@ -43,7 +43,7 @@ export default function EmailShare() {
     const data = {
       recipientmail: recipientData.email,
       recipientname: recipientData.name,
-      checked: !isChecked,
+      checked: isChecked,
     };
 
     try {
