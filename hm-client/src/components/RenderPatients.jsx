@@ -24,7 +24,7 @@ export default function RenderPatients(props) {
           <li className="bg-white bg-opacity-15" key={patient._id}>
             <h3>Name:{patient.firstName}</h3>
             <div className="flex flex-row text-left">
-              <p className="mr-1">Temp: {patient.weight}</p>
+              <p className="mr-1">Temp: {patient.temperatureValue}</p>
               <p>HeartRate: {patient.heartRate}</p>
             </div>
             <hr />
