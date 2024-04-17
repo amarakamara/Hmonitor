@@ -66,11 +66,11 @@ function App() {
   };
 
   useEffect(() => {
-    if (authenticated) {
-      return;
-    } else {
+    if (!authenticated) {
       setAuthenticated(false);
       navigate("/login", { replace: true });
+    } else {
+      return;
     }
   }, [authenticated]);
 
@@ -272,7 +272,7 @@ function App() {
                     </button>
                   </div>
                 </div>
-                <div className="w-full lg:w-1/2 md:w-1/2 sm:w-full flex flex-col-reverse lg:flex-row md:flex-row sm:flex-col-reverse">
+                <div className="w-full lg:w-1/2 md:w-1/2 sm:w-full flex flex-col-reverse lg:flex-row md:flex-row sm:flex-col-reverse h-auto">
                   <PatientInformation />
                 </div>
               </div>
