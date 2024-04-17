@@ -256,7 +256,7 @@ function App() {
                   <div className="w-auto md:w-full lg:w-full flex flex-col justify-between">
                     <button
                       onClick={handleReset}
-                      className="btn w-32 xxs:w-20 sm:w-32 md:w-32 lg:w-32  m-2 bg-teal-900 flex justify-center"
+                      className="btn w-32 xxs:w-20 sm:w-32 md:w-32 lg:w-32 mx-2 my-2 md:mx-auto lg:mx:auto bg-teal-900 flex justify-center"
                     >
                       Reset
                       <span className="material-symbols-outlined">
