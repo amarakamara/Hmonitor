@@ -9,7 +9,7 @@ export default function PatientInformation(props) {
   }, [patientInfo]);
 
   return (
-    <div className="px-2 flex flex-row lg:flex-col md:flex-col sm:flex-row items-center w-full lg:w-1/2 md:w-1/1 sm:w-full bg-teal-900 shadow-md hover:shadow-lg transition duration-300 rounded-lg overflow-hidden">
+    <div className="px-2 flex flex-row lg:flex-col md:flex-col sm:flex-row items-center w-full lg:w-full md:w-full sm:w-full bg-teal-900 shadow-md hover:shadow-lg transition duration-300 rounded-lg overflow-hidden">
       <div className="w-full h-1/1 mt-2 flex justify-center">
         <img
           className="w-24 object-cover"
