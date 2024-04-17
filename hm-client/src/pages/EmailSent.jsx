@@ -26,7 +26,7 @@ export default function EmailSent() {
   return (
     <div className="flex text-white  flex-col justify-center items-center h-screen w-screen bg-teal-900">
       <div className="w-1/2 h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-        <h2 className="font-extrabold text-4xl mb-4 whitespace-nowrap">
+        <h2 className="font-extrabold text-4xl mb-4 whitespace-nowrap mx-auto">
           {message.header}
         </h2>
         <p>{message.body}</p>

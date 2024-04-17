@@ -304,23 +304,22 @@ app.post("/share-data/:id", verifyToken, async (req, res) => {
   if (!patient) {
     return res.status(201).json("No patient with that ID exists.");
   }
+  recipients.push(recipientmail);
 
-  if (checked) {
-    recipients.push(recipientmail, patient.email);
-  } else {
-    recipients.push(recipientmail);
+  if (checked === true) {
+    recipients.push(patient.email);
   }
 
   const mailOptions = {
     user: process.env.MY_EMAIL,
     password: process.env.MY_PASSWORD,
     from: process.env.MY_EMAIL,
-    to: recipients,
+    to: recipients, // Pass the array of recipients
     subject: `${patient.firstName}'s health data.`,
     text: `Hi,
-      We monitored ${patient.firstName}"s health and here is the result for their temperature and heart rate:
+      We monitored ${patient.firstName}'s health and here is the result for their temperature and heart rate:
       Temperature Value: ${patient.temperatureValue}
-      Heart Rate: ${patient.heartRate},`,
+      Heart Rate: ${patient.heartRate}`,
   };
 
   try {
