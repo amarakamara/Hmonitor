@@ -65,7 +65,7 @@ export default function Menu() {
       <hr className="w-full" />
       <button
         onClick={() => setShowPatientForm(true)}
-        className="w-full mt-2 bg-slate-400 bg-opacity-25 flex justify-center whitespace-nowrap"
+        className="w-full text-white mt-2 bg-slate-400 bg-opacity-25 flex justify-center whitespace-nowrap"
       >
         new patient <span className="material-symbols-outlined">add</span>
       </button>
@@ -77,7 +77,7 @@ export default function Menu() {
       <RenderPatients />
       <button
         onClick={handleLogout}
-        className="w-full mt-auto bg-slate-400 bg-opacity-25 flex justify-center whitespace-nowrap self-end"
+        className="w-full text-white mt-auto bg-slate-400 bg-opacity-25 flex justify-center whitespace-nowrap self-end"
       >
         Logout
       </button>

@@ -14,8 +14,8 @@ export default function Login() {
   const { setToken, authenticated, setAuthenticated } = useAuth();
 
   const [loginInfo, setLoginInfo] = useState({
-    email: "",
-    password: "",
+    email: "akamar5050@gmail.com",
+    password: "Hmadmin@123",
   });
 
   const [showMessage, setShowMessage] = useState(false);

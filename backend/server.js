@@ -12,7 +12,6 @@ import fetch from "node-fetch";
 import jwt from "jsonwebtoken";
 
 const jwtSecret = process.env.JWT_SECRET;
-//const passportLocalMongoose = require("passport-local-mongoose");
 import passportLocalMongoose from "passport-local-mongoose";
 
 const thingSpeakChannel = process.env.CHANNEL_ID;

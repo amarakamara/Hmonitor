@@ -4,12 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        cultured: "#F4F9F4",
-        sheen: "#74B49B",
-        foam: "#A7D7C5",
+        blue: "#074173",
       },
       fontFamily: {
-        noto: ["Noto Sans", "sans-serif"],
+        kufam: ["Noto Sans", "sans-serif"],
       },
       borderWidth: {
         0.5: "0.5px",
